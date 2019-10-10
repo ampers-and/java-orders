@@ -14,18 +14,19 @@ public class Order
 
     private double ordamount;
     private double advanceamount;
-    private String orddescription;
 
     @ManyToOne
     @JoinColumn(name = "custcode", nullable = false)
     @JsonIgnoreProperties("orders")
     private Customer customer;
 
+    private String orddescription;
+
     public Order()
     {
     }
 
-    public Order(double ordamount, double advanceamount, String orddescription, Customer customer)
+    public Order(double ordamount, double advanceamount, Customer customer, String orddescription)
     {
         this.ordamount = ordamount;
         this.advanceamount = advanceamount;

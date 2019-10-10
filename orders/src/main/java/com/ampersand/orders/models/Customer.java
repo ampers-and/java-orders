@@ -33,7 +33,7 @@ public class Customer
     private Agent agent;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("customers")
+    @JsonIgnoreProperties("customer")
     private List<Order> orders = new ArrayList<>();
 
     public Customer()

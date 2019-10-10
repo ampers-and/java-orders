@@ -4,6 +4,8 @@ import com.ampersand.orders.models.Agent;
 import com.ampersand.orders.models.Customer;
 import com.ampersand.orders.models.Order;
 import com.ampersand.orders.repositories.AgentRepository;
+import com.ampersand.orders.repositories.CustomerRepository;
+import com.ampersand.orders.repositories.OrderRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

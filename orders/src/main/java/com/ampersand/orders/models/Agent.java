@@ -21,7 +21,7 @@ public class Agent
     private String country;
 
     @OneToMany(mappedBy = "agent", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("agents")
+    @JsonIgnoreProperties("agent")
     private List<Customer> customers = new ArrayList<>();
 
     public Agent()
