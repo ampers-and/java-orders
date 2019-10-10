@@ -1,7 +1,7 @@
 package com.ampersand.orders.services;
 
+import com.ampersand.orders.models.Agent;
 import com.ampersand.orders.repositories.AgentRepository;
-import com.ampersand.orders.services.AgentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +14,11 @@ public class AgentServiceImpl implements AgentService
     @Override
     public void delete(long id)
     {
-        agentrepo.deleteById(id);
+        Agent agent = agentrepo.findById(id).get();
+
+        if(agent.getCustomers().size() == 0)
+        {
+            agentrepo.deleteById(id);
+        }
     }
 }

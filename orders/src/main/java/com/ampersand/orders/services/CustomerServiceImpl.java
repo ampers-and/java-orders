@@ -67,6 +67,32 @@ public class CustomerServiceImpl implements CustomerService
         return custrepo.save(customer);
     }
 
+    //STRETCH
+//    @Override
+//    public Customer update(List<Order> orders, long id)
+//    {
+//        Customer nCustomer = custrepo.findById(id).get();
+//
+//        //Customer constructor
+//        new Customer (custrepo.findById(id).get().getCustname(),
+//                                            custrepo.findById(id).get().getCustcity(),
+//                                            custrepo.findById(id).get().getWorkingarea(),
+//                                            custrepo.findById(id).get().getCustcountry(),
+//                                            custrepo.findById(id).get().getGrade(),
+//                                            custrepo.findById(id).get().getOpeningamt(),
+//                                            custrepo.findById(id).get().getReceiveamt(),
+//                                            custrepo.findById(id).get().getPaymentamt(),
+//                                            custrepo.findById(id).get().getOutstandingamt(),
+//                                            custrepo.findById(id).get().getPhone(),
+//                                            custrepo.findById(id).get().getAgent() );
+//
+//        for (Order o: orders)
+//        {
+//            nCustomer.getOrders().add(new Order(o.getOrdamount(), o.getAdvanceamount(), nCustomer, o.getOrddescription()));
+//        }
+//        return custrepo.save(nCustomer);
+//    }
+
     @Override
     public void delete(long id)
     {

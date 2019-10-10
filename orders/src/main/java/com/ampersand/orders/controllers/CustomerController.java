@@ -35,7 +35,7 @@ public class CustomerController
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    //http://localhost:2020/customer/update/:id
+    //http://localhost:2020/customer/update/:{id}
     //PUT /customer/update/{custcode} - Updates the customer based off of custcode. Does not have to do anything with Orders!
     @PutMapping(value = "/update/{custcode}", consumes = {"application/json"})
     public ResponseEntity<?> updateCustomer(@RequestBody Customer customer, @PathVariable long custcode)
@@ -44,7 +44,7 @@ public class CustomerController
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    //http://localhost:2020/customer/delete/:id
+    //http://localhost:2020/customer/delete/:{id}
     //DELETE /customer/delete/{custcode} - Deletes the customer based off of custcode
     //this should also delete the orders of that customer
     @DeleteMapping(value = "/delete/{custcode}")
